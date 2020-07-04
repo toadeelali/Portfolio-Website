@@ -1,0 +1,79 @@
+{
+  "position": {
+    "senior-front-end-developer": "Senior Front-end Developer",
+    "front-end-developer": "Front-end Developer",
+    "javascript-developer": "Javascript Developer",
+    "full-stack-developer": "Full Stack Developer",
+    "software-developer": "Software Developer"
+  },
+  "header": {
+    "hint": "Click me!",
+    "greeting": "Hi, my name is",
+    "name": "Adeel Ali",
+    "punch-line": "I build things for the web and love what I do",
+    "bio": "Mainly focused on <1>Front-end Development</1> with a good <3>UI/UX</3> eye and always trying different things.",
+    "default": {
+      "bio-end": "I speak many languages but also JavaScript."
+    },
+    "headphones": {
+      "bio-end": "We need more JS Frameworks!"
+    },
+    "drawing": {
+      "bio-end": "Another skill: agile diaper changer."
+    },
+    "dude": {
+      "bio-end": "Remember when we cared about IE6?!"
+    }
+  },
+  "repositories": {
+    "title": "Featured work",
+    "subtitle": "Some projects that I’ve finally finished... almost",
+    "see-more": "I might have more",
+    "repos": {
+      "project-1": "A JavaScript based powerful resource pre-loader with concurrent download and dependency resolving option.",
+      "project-2": "1on1 Quiz - Competitive gaming platform",
+      "website": {
+        "title": "Portfolio Website",
+        "description": "This one. Yep, you can check the cool stuff that I've used to build it"
+      }
+    }
+  },
+  "work": {
+    "title": "Places that I’ve worked",
+    "subtitle": "Amazing and skilled people I've met",
+    "journey": {
+      "title": "My Journey",
+      "intro": "I started working with Embedded systems and programmed my first Robot in 2011. My professional career started in 2012 after completion of Bachelors in Computer Engineering degree. I always loved design + code but since I am not as close as a Designer (look at the design of this website) I became <1>Software Engineer</1>.",
+      "body": "I jump started my <0>Mobile Apps and Games developer</0> career in 2014 and till now I have developed more than 7+ cross platform educational games, 5+ cross platform mobile applications and helped in development of several other projects.",
+      "conclusion": "Now as <3>Principal Software Engineer</3>, I am responsible for cross team communication, mentoring, doing R&Ds, writing project requirement document (PRDs), libraries and frameworks."
+    },
+    "see-more": "Check more details on LinkedIn"
+  },
+  "gists": {
+    "title": "Latest Gists",
+    "subtitle": "Don’t have a blog yet but I have Gists!",
+    "see-more": "There's more",
+    "no-gists": "No Gists were found"
+  },
+  "see-more": {
+    "link": "See More"
+  },
+  "social": {
+    "titles": {
+      "linkedin": "Check my LinkedIn Profile",
+      "twitter": "Follow me on Twitter",
+      "github": "Judge my code on GitHub",
+      "spotify": "Great selection of tunes on Spotify"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "quote": "Made with a lot of anxiety during the <1>COVID-19's quarantine</1>."
+  },
+  "error": {
+    "message": "Sorry, something went wrong! Please, try again later."
+  },
+  "scroll-up": {
+    "title": "Go to the top!"
+  }
+}

@@ -1,0 +1,13 @@
+@value breakpoint-lg from '../../../assets/styles/variables.css';
+
+.wrapper { text-align: center; }
+
+.section-link {
+  composes: link from '../../../assets/styles/helpers.css';
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+@media (min-width: breakpoint-lg) {
+  .section-link { margin-top: 3rem; }
+}

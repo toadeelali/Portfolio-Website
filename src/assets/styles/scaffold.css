@@ -1,0 +1,48 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: var(--font-size-root);
+  min-width: 300px;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  height: 100%;
+  color: var(--color-text);
+  font-size: var(--font-size);
+  font-family: var(--font-family-system);
+  line-height: var(--font-line-height);
+  font-weight: var(--font-weight-body);
+  background-color: var(--color-bg);
+  transition: background-color .2s ease-out;
+  -webkit-tap-highlight-color: rgba(#f65e5e, .1);
+}
+
+#root { overflow: hidden; }
+
+.section { 
+  padding: 2rem 1rem 2.5rem;
+  transition: background-color .2s ease-out;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .section { padding: 2rem 2rem 2.5rem; }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

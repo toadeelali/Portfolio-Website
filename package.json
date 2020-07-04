@@ -1,0 +1,104 @@
+{
+  "name": "adeels.tech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Adeel's tech",
+  "author": {
+    "name": "Adeel Ali",
+    "email": "wikz@live.com",
+    "url": "https://adeels.tech"
+  },
+  "license": "MIT",	
+  "repository": {	
+    "type": "git",	
+    "url": "https://github.com/wikz/Portfolio-Website.git"	
+  },
+  "dependencies": {
+    "i18next": "^19.4.3",
+    "i18next-browser-languagedetector": "^4.1.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-i18next": "^9.0.10",
+    "react-redux": "^7.2.0",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^13.11.1",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.8",
+    "@types/redux-mock-store": "^1.0.2",
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "cross-env": "^7.0.2",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "4.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.x",
+    "husky": "^3.0.1",
+    "jest-fetch-mock": "^3.0.3",
+    "lint-staged": "^10.1.3",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.4",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
+    "semantic-release": "^17.0.4",
+    "serve": "^11.3.0",
+    "typescript": "~3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint && yarn test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "yarn format",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:local": "yarn build && serve -s build",
+    "test": "cross-env CI=true react-scripts test --env=jsdom --silent --verbose",
+    "test:watch": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "release": "semantic-release",
+    "release:local": "semantic-release --no-ci --dry-run",
+    "ci:action-trigger": "bash ./scripts/trigger-github-action.sh"
+  }
+}
