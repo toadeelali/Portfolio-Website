@@ -1,10 +1,9 @@
 {
   "position": {
-    "senior-front-end-developer": "Senior Front-end Developer",
-    "front-end-developer": "Front-end Developer",
-    "javascript-developer": "Javascript Developer",
-    "full-stack-developer": "Full Stack Developer",
-    "software-developer": "Software Developer"
+    "software-engineer": "Software Engineer",
+    "mobile-apps-developer": "Mobile Apps Developer",
+    "front-end-developer": "Front-End Developer",
+    "games-developer": "Games Developer"
   },
   "header": {
     "hint": "Click me!",
@@ -56,7 +55,7 @@
     "no-gists": "No Gists were found"
   },
   "see-more": {
-    "link": "See More"
+    "link": "See more"
   },
   "social": {
     "titles": {

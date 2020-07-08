@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import styles from './Header.module.css'
 import {HeaderData} from './HeaderData'
 import * as actions from './redux/HeaderActions'
-import Personality from '../../shared/components/personality/Personality'
+import Personality from 'shared/components/personality/Personality'
 import { HeaderEnum } from './models/HeaderEnum'
 
 const Header = ({t}: any) => {
@@ -68,7 +68,7 @@ const Header = ({t}: any) => {
 
         <div className={styles['bio-wrapper']}>
           <p className={styles['punch-line']}>
-            <Trans i18nKey="header.punch-line">I build things for the web and love what I do.</Trans>
+            <Trans i18nKey="header.punch-line">{personalityState?.data?.TagLine}</Trans>
           </p>
           <p className={styles.bio}>
             <Trans
