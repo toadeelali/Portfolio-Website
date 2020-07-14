@@ -6,7 +6,7 @@ import styles from './Header.module.css'
 import {HeaderData} from './HeaderData'
 import * as actions from './redux/HeaderActions'
 import Personality from 'shared/components/personality/Personality'
-import { HeaderEnum } from './models/HeaderEnum'
+import {HeaderEnum} from './models/HeaderEnum'
 
 const Header = ({t}: any) => {
   const headerData = HeaderData()
@@ -54,7 +54,7 @@ const Header = ({t}: any) => {
               }}
               image={{
                 src: personalityState?.data?.picture,
-                alt: 'Adeel Ali',
+                alt: 'Adeel Ali'
               }}
             />
           </div>
@@ -68,16 +68,10 @@ const Header = ({t}: any) => {
 
         <div className={styles['bio-wrapper']}>
           <p className={styles['punch-line']}>
-            <Trans i18nKey="header.punch-line">{personalityState?.data?.TagLine}</Trans>
+            <Trans i18nKey="header.punch-line">{personalityState?.data?.tagLine}</Trans>
           </p>
           <p className={styles.bio}>
-            <Trans
-              i18nKey="header.bio"
-              defaults="Mainly focused on <1>Front-end Development</1> with a good
-              <3>UI/UX</3> eye and always trying different things."
-            >
-              .<strong>.</strong> . <strong>.</strong> .
-            </Trans>
+            <span dangerouslySetInnerHTML={{__html: personalityState?.data?.description}} />
             <strong>
               <em className={styles['personality-bio']}> {personalityState?.data?.bio}</em>
             </strong>

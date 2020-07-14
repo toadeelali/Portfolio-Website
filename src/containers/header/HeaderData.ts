@@ -4,13 +4,16 @@ import drawing from 'assets/images/photos/drawing.jpg'
 import dude from 'assets/images/photos/dude.jpg'
 import i18n from 'i18n'
 
+export type HeaderModelName = 'default' | 'headphones' | 'drawing' | 'dude'
+
 export interface HeaderModel {
-  name: string
+  name: HeaderModelName
   picture: any
   position: any
   bio: any
-  TagLine:string
   color: string
+  tagLine: string
+  description: string
 }
 
 export const HeaderData = (): HeaderModel[] => [
@@ -19,31 +22,35 @@ export const HeaderData = (): HeaderModel[] => [
     picture: husband,
     position: i18n.t('position.software-engineer'),
     bio: i18n.t('header.default.bio-end'),
-    TagLine: 'I build things for the web and love what I do.',
-    color: 'orange'
+    color: 'orange',
+    tagLine: 'I build things for the web and love what I do.',
+    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
     name: 'headphones',
     picture: headphones,
     position: i18n.t('position.mobile-apps-developer'),
     bio: i18n.t('header.headphones.bio-end'),
-    TagLine: 'I build things for the web and love what I do.',
-    color: 'purple'
+    color: 'purple',
+    tagLine: 'I build things for the web and love what I do.',
+    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
     name: 'drawing',
     picture: drawing,
     position: i18n.t('position.front-end-developer'),
-    TagLine: 'I build things for the web and love what I do.',
     bio: i18n.t('header.drawing.bio-end'),
-    color: 'cyan'
+    color: 'cyan',
+    tagLine: 'I build things for the web and love what I do.',
+    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
     name: 'dude',
     picture: dude,
     position: i18n.t('position.games-developer'),
     bio: i18n.t('header.dude.bio-end'),
-    TagLine: 'I build things for the web and love what I do.',
-    color: 'yellow'
+    color: 'yellow',
+    tagLine: 'I build things for the web and love what I do.',
+    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   }
 ]
