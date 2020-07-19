@@ -7,6 +7,7 @@ import i18n from 'i18n'
 export type HeaderModelName = 'default' | 'headphones' | 'drawing' | 'dude'
 
 export interface HeaderModel {
+  id:Number
   name: HeaderModelName
   picture: any
   position: any
@@ -18,6 +19,7 @@ export interface HeaderModel {
 
 export const HeaderData = (): HeaderModel[] => [
   {
+    id:0,
     name: 'default',
     picture: husband,
     position: i18n.t('position.software-engineer'),
@@ -27,6 +29,7 @@ export const HeaderData = (): HeaderModel[] => [
     description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
+    id:1,
     name: 'headphones',
     picture: headphones,
     position: i18n.t('position.mobile-apps-developer'),
@@ -36,6 +39,7 @@ export const HeaderData = (): HeaderModel[] => [
     description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
+    id:2,
     name: 'drawing',
     picture: drawing,
     position: i18n.t('position.front-end-developer'),
@@ -45,6 +49,7 @@ export const HeaderData = (): HeaderModel[] => [
     description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
   },
   {
+    id:3,
     name: 'dude',
     picture: dude,
     position: i18n.t('position.games-developer'),

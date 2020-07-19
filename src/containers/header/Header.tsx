@@ -11,24 +11,20 @@ import {HeaderEnum} from './models/HeaderEnum'
 const Header = ({t}: any) => {
   const headerData = HeaderData()
   const dispatch = useDispatch()
-  const [count, setCount]: any = useState(0)
-  const [active, setActive]: any = useState('')
+  const [stateRef, setStateRef]: any = useState({count: 0, active: ''});
   const languageState = useSelector((state: any) => state.language)
   const personalityState = useSelector((state: any) => state.personality)
 
   const onClickPicture = useCallback(() => {
-    setActive('active')
+    setStateRef({active: 'active', count: stateRef.count});
 
     setTimeout(() => {
-      setActive(undefined)
-      count < headerData.length - 1 ? setCount(count + 1) : setCount(0)
+      setStateRef({active: undefined, count: stateRef.count < headerData.length - 1 ? stateRef.count + 1 : 0});
     }, HeaderEnum.animationDelay)
-  }, [count, headerData])
+  }, [stateRef.count, headerData])
 
-  const togglePersonality = useCallback(
-    (personality: any) => {
+  const togglePersonality = useCallback((personality: any) => {
       dispatch(actions.setPersonality(personality))
-
       document.body.className = document.body.className.replace(/primary-color-\w+/g, '')
       document.body.classList.add(`primary-color-${personality.color}`)
     },
@@ -37,9 +33,9 @@ const Header = ({t}: any) => {
 
   useEffect(() => {
     dispatch(actions.getPersonality())
-    togglePersonality(headerData[count])
+    togglePersonality({...headerData[stateRef.count]})
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count, languageState])
+  }, [stateRef.count, languageState])
 
   return (
     <section className={`section ${styles['section-header']}`}>
@@ -48,7 +44,7 @@ const Header = ({t}: any) => {
           <div className={styles['header-picture']}>
             <span className={styles['picture-hint']}>{t('header.hint')}</span>
             <Personality
-              active={active}
+              active={stateRef.active}
               events={{
                 onClick: onClickPicture
               }}

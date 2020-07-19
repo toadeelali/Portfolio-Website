@@ -24,19 +24,6 @@
       "bio-end": "Remember when we cared about IE6?"
     }
   },
-  "repositories": {
-    "title": "Featured work",
-    "subtitle": "Some projects that I’ve finally finished... almost",
-    "see-more": "I might have more",
-    "repos": {
-      "project-1": "A JavaScript based powerful resource pre-loader with concurrent download and dependency resolving option.",
-      "project-2": "1on1 Quiz - Competitive gaming platform",
-      "website": {
-        "title": "Portfolio Website",
-        "description": "This one. Yep, you can check the cool stuff that I've used to build it"
-      }
-    }
-  },
   "work": {
     "title": "Places that I’ve worked",
     "subtitle": "Amazing and skilled people I've met",

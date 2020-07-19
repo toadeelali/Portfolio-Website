@@ -1,22 +1,24 @@
-import React from 'react'
+import React, {memo} from 'react'
 import {withNamespaces} from 'react-i18next'
+import {useSelector} from 'react-redux'
 
 import styles from './Repositories.module.css'
-import {RepositoriesData, RepositoryModel} from './RepositoriesData'
-import Headings from '../../shared/components/headings/Headings'
-import SeeMore from '../../shared/components/see-more/SeeMore'
-import {ReactComponent as GithubLogo} from '../../assets/images/social/github.svg'
+import {RepositoriesData, SingleProjectModel} from './RepositoriesData'
+import Headings from 'shared/components/headings/Headings'
+import SeeMore from 'shared/components/see-more/SeeMore'
+import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
 
-const Repositories = ({t}: any) => {
-  const repositoriesData = RepositoriesData(t)
+const Repositories = memo(({t}: any) => {
+  const personalityId = useSelector((state: any) => state.personality.data.id);
+  const repositoriesData = RepositoriesData(t)[personalityId];
 
   return (
     <section className={`section ${styles['section-repositories']}`}>
       <div className="section-content">
-        <Headings title={t('repositories.title')} subtitle={t('repositories.subtitle')} />
+        <Headings title={repositoriesData.title} subtitle={repositoriesData.subtitle} />
 
         <ul className={`${styles.list}`}>
-          {repositoriesData.map((repository: RepositoryModel, i: number) => (
+          {repositoriesData.collection.map((repository: SingleProjectModel, i: number) => (
             <li key={i} className={styles['list-item']}>
               <a className={styles.link} href={repository.url} title={repository.name}>
                 {repository.status === 'in-progress' && (
@@ -34,15 +36,15 @@ const Repositories = ({t}: any) => {
             </li>
           ))}
         </ul>
-
         <SeeMore
           props={{
+            text:repositoriesData.seeMore,
             url: 'https://github.com/wikz'
           }}
         />
       </div>
     </section>
   )
-}
+});
 
 export default withNamespaces()(Repositories)
