@@ -15,7 +15,7 @@ export interface RepositoryModel {
   collection: SingleProjectModel[]
 }
 
-export const RepositoriesData = (t: any): RepositoryModel[] => [
+export const RepositoriesData = (): RepositoryModel[] => [
   {
     title: 'Featured work',
     subtitle: 'Some projects that I’ve finally finished... almost',

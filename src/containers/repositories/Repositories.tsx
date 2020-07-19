@@ -1,5 +1,4 @@
 import React, {memo} from 'react'
-import {withNamespaces} from 'react-i18next'
 import {useSelector} from 'react-redux'
 
 import styles from './Repositories.module.css'
@@ -8,9 +7,9 @@ import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
 import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
 
-const Repositories = memo(({t}: any) => {
+const Repositories = memo(() => {
   const personalityId = useSelector((state: any) => state.personality.data.id);
-  const repositoriesData = RepositoriesData(t)[personalityId];
+  const repositoriesData = RepositoriesData()[personalityId];
 
   return (
     <section className={`section ${styles['section-repositories']}`}>
@@ -47,4 +46,4 @@ const Repositories = memo(({t}: any) => {
   )
 });
 
-export default withNamespaces()(Repositories)
+export default Repositories;
