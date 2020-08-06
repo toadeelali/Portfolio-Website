@@ -1,10 +1,11 @@
 import React from 'react'
-import {withNamespaces} from 'react-i18next'
+
 import styles from './ScrollUp.module.css'
+import translationEN from 'locales/en/translation.json';
 
 import {ReactComponent as ArrowUpIcon} from '../../../assets/images/icons/arrow-up.svg'
 
-const ScrollUp = ({t}: any) => {
+const ScrollUp = () => {
   const scrollTop = () =>
     window.scroll({
       top: 0,
@@ -12,7 +13,7 @@ const ScrollUp = ({t}: any) => {
     })
 
   return (
-    <button className={styles.button} onClick={scrollTop} title={t('scroll-up.title')}>
+    <button className={styles.button} onClick={scrollTop} title={translationEN['scroll-up'].title}>
       <span className={styles.arrow}>
         <ArrowUpIcon />
       </span>
@@ -20,4 +21,4 @@ const ScrollUp = ({t}: any) => {
   )
 }
 
-export default withNamespaces()(ScrollUp)
+export default ScrollUp;

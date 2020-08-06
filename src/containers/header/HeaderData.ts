@@ -2,12 +2,13 @@ import husband from 'assets/images/photos/husband.jpg'
 import headphones from 'assets/images/photos/headphones.jpg'
 import drawing from 'assets/images/photos/drawing.jpg'
 import dude from 'assets/images/photos/dude.jpg'
-import i18n from 'i18n'
+
+import translationEN from 'locales/en/translation.json'
 
 export type HeaderModelName = 'default' | 'headphones' | 'drawing' | 'dude'
 
 export interface HeaderModel {
-  id:Number
+  id: Number
   name: HeaderModelName
   picture: any
   position: any
@@ -17,45 +18,52 @@ export interface HeaderModel {
   description: string
 }
 
-export const HeaderData = (): HeaderModel[] => [
-  {
-    id:0,
-    name: 'default',
-    picture: husband,
-    position: i18n.t('position.software-engineer'),
-    bio: i18n.t('header.default.bio-end'),
-    color: 'orange',
-    tagLine: 'I build things for the web and love what I do.',
-    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
-  },
-  {
-    id:1,
-    name: 'headphones',
-    picture: headphones,
-    position: i18n.t('position.mobile-apps-developer'),
-    bio: i18n.t('header.headphones.bio-end'),
-    color: 'purple',
-    tagLine: 'I build things for the web and love what I do.',
-    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
-  },
-  {
-    id:2,
-    name: 'drawing',
-    picture: drawing,
-    position: i18n.t('position.front-end-developer'),
-    bio: i18n.t('header.drawing.bio-end'),
-    color: 'cyan',
-    tagLine: 'I build things for the web and love what I do.',
-    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
-  },
-  {
-    id:3,
-    name: 'dude',
-    picture: dude,
-    position: i18n.t('position.games-developer'),
-    bio: i18n.t('header.dude.bio-end'),
-    color: 'yellow',
-    tagLine: 'I build things for the web and love what I do.',
-    description: 'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
-  }
-]
+export const HeaderData = (): HeaderModel[] => {
+  const {position, header} = translationEN
+  return [
+    {
+      id: 0,
+      name: 'default',
+      picture: husband,
+      position: position['software-engineer'],
+      bio: header.default['bio-end'],
+      color: 'orange',
+      tagLine: 'I build things for the web and love what I do.',
+      description:
+        'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
+    },
+    {
+      id: 1,
+      name: 'headphones',
+      picture: headphones,
+      position: position['mobile-apps-developer'],
+      bio: header.headphones['bio-end'],
+      color: 'purple',
+      tagLine: 'I build things for the web and love what I do.',
+      description:
+        'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
+    },
+    {
+      id: 2,
+      name: 'drawing',
+      picture: drawing,
+      position: position['front-end-developer'],
+      bio: header.drawing['bio-end'],
+      color: 'cyan',
+      tagLine: 'I build things for the web and love what I do.',
+      description:
+        'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
+    },
+    {
+      id: 3,
+      name: 'dude',
+      picture: dude,
+      position: position['games-developer'],
+      bio: header.dude['bio-end'],
+      color: 'yellow',
+      tagLine: 'I build things for the web and love what I do.',
+      description:
+        'Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.'
+    }
+  ]
+}

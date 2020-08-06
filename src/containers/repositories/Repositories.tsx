@@ -19,7 +19,7 @@ const Repositories = memo(() => {
         <ul className={`${styles.list}`}>
           {repositoriesData.collection.map((repository: SingleProjectModel, i: number) => (
             <li key={i} className={styles['list-item']}>
-              <a className={styles.link} href={repository.url} title={repository.name}>
+              <a className={styles.link} href={repository.url} title={repository.name} target="blank">
                 {repository.status === 'in-progress' && (
                   <span className={styles.status}>{repository.status === 'in-progress' ? repository.status : ''}</span>
                 )}
@@ -38,7 +38,7 @@ const Repositories = memo(() => {
         <SeeMore
           props={{
             text:repositoriesData.seeMore,
-            url: 'https://github.com/wikz'
+            url: repositoriesData.url
           }}
         />
       </div>

@@ -1,8 +1,7 @@
 import React from 'react'
 import {Provider} from 'react-redux'
 import createMockStore from 'redux-mock-store'
-import {I18nextProvider} from 'react-i18next'
-import i18n from '../../i18n'
+
 import {render} from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import Gists from './Gists'
@@ -32,9 +31,7 @@ describe.skip('Gists', () => {
   test.skip('get and set gists to local storage', () => {
     const {queryByText, queryAllByTestId} = render(
       <Provider store={mockStore({})}>
-        <I18nextProvider i18n={i18n}>
-          <Gists />
-        </I18nextProvider>
+        <Gists />
       </Provider>
     )
 
@@ -55,9 +52,7 @@ describe.skip('Gists', () => {
   test.skip('check gist items', () => {
     const {queryAllByTestId} = render(
       <Provider store={mockStore({})}>
-        <I18nextProvider i18n={i18n}>
-          <Gists />
-        </I18nextProvider>
+        <Gists />
       </Provider>
     )
 
