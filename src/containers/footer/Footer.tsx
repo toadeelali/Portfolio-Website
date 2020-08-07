@@ -1,13 +1,14 @@
 import React from 'react'
-import {Trans, withNamespaces} from 'react-i18next'
 import styles from './Footer.module.css'
 
 import Social from 'shared/components/social/Social'
-// import Languages from 'shared/components/languages/Languages'
 import Theme from 'shared/components/theme/Theme'
 import ScrollUp from 'shared/components/scroll-up/ScrollUp'
+import translationEN from 'locales/en/translation.json';
 
-const Footer = ({t}: any) => {
+const Footer = () => {
+  const {footer} = translationEN;
+
   return (
     <footer className="section">
       <div className={`section-content ${styles.footer}`}>
@@ -19,11 +20,10 @@ const Footer = ({t}: any) => {
           </div>
         </div>
         <div className={styles['bottom-wrapper']}>
-          <p className={styles.copyright}>© 2020 Adeel Ali - {t('footer.copyright')}</p>
+          <p className={styles.copyright}>© 2020 Adeel Ali - {footer.copyright}</p>
           <p className={styles.quote}>
-            <Trans i18nKey="footer.quote">
               <span>
-                Made with a lot of <em>anxiety</em> during{' '}
+                Made with a lot of <em>anxiety</em> during&nbsp;
               </span>
               <a
                 className={styles['quote-link']}
@@ -31,7 +31,6 @@ const Footer = ({t}: any) => {
               >
                 a quarantine time.
               </a>
-            </Trans>
           </p>
         </div>
       </div>
@@ -39,4 +38,4 @@ const Footer = ({t}: any) => {
   )
 }
 
-export default withNamespaces()(Footer)
+export default Footer;

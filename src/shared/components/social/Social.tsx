@@ -1,10 +1,10 @@
 import React from 'react'
-import {withNamespaces} from 'react-i18next'
+
 import styles from './Social.module.css'
 import {SocialData, SocialModel} from './SocialData'
 
-const Social = ({t, props}: any) => {
-  const socialData = SocialData(t)
+const Social = ({props}: any) => {
+  const socialData = SocialData()
 
   return (
     <ul className={`${props.className} ${styles.list}`}>
@@ -21,4 +21,4 @@ const Social = ({t, props}: any) => {
   )
 }
 
-export default withNamespaces()(Social)
+export default Social;

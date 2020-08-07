@@ -7,7 +7,7 @@ export interface WorkModel {
   status?: string
 }
 
-export const WorkData = (t: any): WorkModel[] => [
+export const WorkData = (): WorkModel[] => [
   {
     title: 'Knowledge Platform Pte. Ltd.',
     position: 'Principal Software Engineer',
