@@ -1,18 +1,17 @@
 /* Variables
 ------------------------------------- */
-
 :root {
-  --box-shadow-color: #D3D3D3;
-  --box-shadow: 3px 3px 0;
+  --box-shadow-color: rgba(17,22,26,.16), 0 2px 4px 0 rgba(17,22,26,.08), 0 4px 8px 0 rgba(17,22,26,.08); /*#d3d3d3;*/
+  --box-shadow: 0 0 4px 0;
   --color-primary-darker: #2d47ce;
   --color-purple: #7614b6;
   --color-purple-dark-mode: #c773ef;
-  --color-blue: #4B66F2;
+  --color-blue: #4b66f2;
   --color-gold: #efbb35;
   --color-gold-darker: #dda414;
   --color-grey: #f3f3f3;
   --color-grey-2: #e8e8e8;
-  --color-grey-3: #D3D3D3;
+  --color-grey-3: #d3d3d3;
   --color-grey-dark: #a7a7a7;
   --color-grey-darker: #525252;
   --color-green: #5ef24b;
@@ -21,7 +20,7 @@
   --color-red: #f24bc6;
   --color-orange: #f65e5e;
   --color-pink: #f24bc6;
-  --color-black: #212121;               
+  --color-black: #212121;
   --color-black-full: #080808;
   --color-black-2: #272727;
   --color-white: #ffffff;
@@ -33,21 +32,23 @@
   --color-card-text: var(--color-text);
   --color-card-background: var(--color-white);
   --color-card-border: transparent;
-  --color-twitter: #1DA1F2;
-  --color-linkedin: #2867B2;
-  --color-github: #AD5C51;
-  --color-spotify: #1DB954;
+  --color-twitter: #1da1f2;
+  --color-linkedin: #2867b2;
+  --color-github: #ad5c51;
+  --color-spotify: #1db954;
   --dashed-border: 1px dashed;
   --font-size-root: 17px;
   --font-size: 1rem;
-  --font-line-height: 1.8;
+  --font-line-height: 1.5;
   --font-weight: 400;
-  --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --work-list-pseudo-color: var(--color-grey-3);
   --work-pseudo-color: var(--color-grey-3);
   --color-white-2: #fdfdfd;
   --loading-bg-color: 255, 255, 255;
-  --transition: .06s ease-in-out;
+  --transition: 0.06s ease-in-out;
+  --border-radius: 8px;
 }
 
 @value breakpoint-xs: 320px;

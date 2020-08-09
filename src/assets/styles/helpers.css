@@ -26,7 +26,8 @@
 @media (hover: hover) {
   .card-hover:hover {
     color: var(--color-card-text);
-    border-color: var(--color-primary);
     box-shadow: 5px 5px 5px var(--color-grey-dark);
+    border: 3px solid var(--color-primary);
+    transition: all var(--transition);
   }
 }

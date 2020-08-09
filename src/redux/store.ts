@@ -1,7 +1,7 @@
 import {combineReducers, createStore} from 'redux'
-import {HeaderReducer} from '../containers/header/redux/HeaderReducer'
-import {GistsReducer} from '../containers/gists/redux/GistsReducer'
-import {ThemeReducer} from '../shared/components/theme/redux/ThemeReducer'
+import {HeaderReducer} from 'containers/header/redux/HeaderReducer'
+import {GistsReducer} from 'containers/gists/redux/GistsReducer'
+import {ThemeReducer} from 'shared/components/theme/redux/ThemeReducer'
 
 const reducers = combineReducers({
   gists: GistsReducer,
