@@ -5,6 +5,7 @@
   background-color: var(--color-black);
   transition: var(--transition);
   box-shadow: var(--box-shadow) var(--box-shadow-color);
+  font-family: var(--font-family-system);
 }
 
 .button-light {

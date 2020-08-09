@@ -34,7 +34,7 @@ const Work = () => {
           <ul className={`${styles.list}`}>
             {workData.map((work: WorkModel, i: number) => (
               <li key={i} className={`${styles['list-item']} ${oddJob(i) ? styles['list-item-left'] : ''}`}>
-                <a className={styles['list-item-card']} href={work.url} title={work.title}>
+                <a rel="noopener noreferrer" target="_blank" className={styles['list-item-card']} href={work.url} title={work.title}>
                   <span className={`${styles.logo} ${styles[`logo-${work.year.toLowerCase().split(' ').join('-')}`]}`}>
                     {work.title}
                   </span>
