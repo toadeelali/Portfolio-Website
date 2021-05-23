@@ -63,12 +63,12 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
-      "pre-push": "npx lint && npx test"
+      "pre-push": "yarn lint && yarn test"
     }
   },
   "lint-staged": {
     "src/**/*.{js,ts}": [
-      "npx format",
+      "yarn format",
       "git add"
     ]
   },
@@ -87,7 +87,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:local": "npx build && serve -s build",
+    "build:local": "yarn build && serve -s build",
     "test": "cross-env CI=true react-scripts test --env=jsdom --silent --verbose",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
