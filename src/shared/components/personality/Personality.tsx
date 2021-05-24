@@ -33,6 +33,8 @@ const Personality = (props: Props) => {
           className={styles.picture}
           src={props.image?.src}
           alt={props.image?.alt}
+          height="120"
+          width="120"
         />
       </div>
       <p className={styles.text}>{props.text}</p>
