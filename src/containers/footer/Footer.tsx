@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles['bottom-wrapper']}>
-          <p className={styles.copyright}>© 2020 Adeel Ali - {footer.copyright}</p>
+          <p className={styles.copyright}>© 2021 Adeel Ali - {footer.copyright}</p>
           <p className={styles.quote}>
             <span>
               Made with a lot of <em>anxiety</em> during&nbsp;

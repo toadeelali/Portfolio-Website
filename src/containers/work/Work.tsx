@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import styles from './Work.module.css';
-import {WorkData, WorkModel} from './WorkData';
-import Headings from 'shared/components/headings/Headings';
+import styles from './Work.module.css'
+import {WorkData, WorkModel} from './WorkData'
+import Headings from 'shared/components/headings/Headings'
 
-import translationEN from 'locales/en/translation.json';
+import translationEN from 'locales/en/translation.json'
 
 const oddJob = (int: number): Boolean => Math.abs(int % 2) === 1
 
 const Work = () => {
   const workData = WorkData()
-  const {work} = translationEN;
+  const {work} = translationEN
 
   return (
     <section className={`section ${styles['section-work']}`}>
@@ -34,10 +34,14 @@ const Work = () => {
           <ul className={`${styles.list}`}>
             {workData.map((work: WorkModel, i: number) => (
               <li key={i} className={`${styles['list-item']} ${oddJob(i) ? styles['list-item-left'] : ''}`}>
-                <a rel="noopener noreferrer" target="_blank" className={styles['list-item-card']} href={work.url} title={work.title}>
-                  <span className={`${styles.logo} ${styles[`logo-${work.year.toLowerCase().split(' ').join('-')}`]}`}>
-                    {work.title}
-                  </span>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className={styles['list-item-card']}
+                  href={work.url}
+                  title={work.title}
+                >
+                  <span className={`${styles.logo} ${styles[work.logo + '']}`}>{work.title}</span>
                   <div>
                     <div className={styles.title}>{work.title}</div>
                     <div className={styles.position}>{work.position}</div>
@@ -56,4 +60,4 @@ const Work = () => {
   )
 }
 
-export default Work;
+export default Work
