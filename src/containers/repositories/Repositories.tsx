@@ -26,7 +26,7 @@ const Repositories = memo(() => {
                 <span className={styles['link-wrapper']}>
                   <i className={styles.icon}>{repository.icon}</i>
                   <span className={styles.name}>{repository.name}</span>
-                  <span className={styles.github}>
+                  <span className={styles['placed-at']}>
                     <GithubLogo />
                   </span>
                 </span>

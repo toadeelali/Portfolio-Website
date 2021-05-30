@@ -12,7 +12,7 @@ export interface RepositoryModel {
   title: String
   subtitle: String
   seeMore: String
-  url:String
+  url: String
   collection: SingleProjectModel[]
 }
 
@@ -21,7 +21,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
     title: 'Featured work',
     subtitle: 'Some projects that I’ve finally finished... almost',
     seeMore: 'I might have more',
-    url:'https://www.linkedin.com/in/wikz87/',
+    url: 'https://www.linkedin.com/in/wikz87/',
     collection: [
       {
         icon: '🤖',
@@ -35,7 +35,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
         name: 'Resource Preloader',
         url: 'https://github.com/wikz/Resource-Preloader',
         description:
-          'A JavaScript based powerful resource pre-loader with concurrent download and dependency resolving option.',
+          'A JavaScript based powerful resource pre-loader with concurrent download and dependency resolving feature.',
         status: 'done'
       },
       {
@@ -43,7 +43,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
         name: '1on1 Quiz',
         url: 'https://1on1quiz.com',
         description: '1on1 Quiz - Competitive gaming platform',
-        status: 'in-progress'
+        status: 'done'
       }
     ]
   },
@@ -51,7 +51,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
     title: 'Mobile Applications',
     subtitle: 'Some apps that I built',
     seeMore: 'I might have more',
-    url:'https://www.linkedin.com/in/wikz87/',
+    url: 'https://www.linkedin.com/in/wikz87/',
     collection: [
       {
         icon: '🤖',
@@ -81,7 +81,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
     title: 'Applications',
     subtitle: "Some Web & desktop Applications I've worked on",
     seeMore: 'I might have more',
-    url:'https://www.linkedin.com/in/wikz87/',
+    url: 'https://www.linkedin.com/in/wikz87/',
     collection: [
       {
         icon: '🤖',
@@ -110,7 +110,7 @@ export const RepositoriesData = (): RepositoryModel[] => [
     title: 'CrossPlatform Games',
     subtitle: 'Some games that I’ve launched successfully',
     seeMore: 'I might have more',
-    url:'https://www.linkedin.com/in/wikz87/',
+    url: 'https://www.linkedin.com/in/wikz87/',
     collection: [
       {
         icon: '🤖',
