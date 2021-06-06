@@ -1,19 +1,19 @@
 {
-  "extends": [
-    "react-app"
-  ],
-  "plugins": [
-    "no-null"
-  ],
+  "extends": ["react-app"],
+  "plugins": ["no-null"],
   "rules": {
-    "no-null/no-null": 1,
-    "max-len": [ "warn", {
-      "code": 120,
-      "ignoreUrls": true,
-      "ignoreComments": false,
-      "ignoreRegExpLiterals": true,
-      "ignoreStrings": true,
-      "ignoreTemplateLiterals": false
-    }]
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": false
+      }
+    ]
   }
 }
