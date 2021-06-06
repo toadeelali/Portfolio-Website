@@ -2,7 +2,7 @@
   "name": "theadeel.com",
   "version": "1.1.0",
   "private": true,
-  "description": "Adeel's tech",
+  "description": "It's Adeel Ali",
   "author": {
     "name": "Adeel Ali",
     "email": "wikz@live.com",
@@ -14,57 +14,50 @@
     "url": "https://github.com/wikz/Portfolio-Website.git"
   },
   "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^13.13.52",
-    "@types/react": "^16.14.6",
-    "@types/react-dom": "^16.9.13",
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9 ",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.1",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
     "@types/react-redux": "^7.1.16",
     "@types/redux-mock-store": "^1.0.2",
     "@types/smoothscroll-polyfill": "^0.3.1",
-    "@typescript-eslint/eslint-plugin": "2.x",
-    "@typescript-eslint/parser": "2.x",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
     "babel-eslint": "10.x",
     "cross-env": "^7.0.3",
-    "eslint": "6.x",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-flowtype": "4.x",
-    "eslint-plugin-import": "^2.23.3",
+    "eslint": "^7.x",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.7.2",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-no-null": "^1.0.2",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "2.x",
-    "husky": "^3.0.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
     "jest-fetch-mock": "^3.0.3",
-    "lint-staged": "^10.5.4",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.3.0",
-    "react-scripts": "3.4.1",
+    "lint-staged": "^11.0.0",
+    "node-sass": "^6.0.0",
+    "prettier": "^2.3.1",
+    "react-scripts": "4.0.3",
     "redux": "^4.1.0",
     "redux-mock-store": "^1.5.4",
     "semantic-release": "^17.4.3",
     "serve": "^11.3.0",
-    "typescript": "^3.7.7"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn lint && yarn test"
-    }
+    "typescript": "^4.3.2"
   },
   "lint-staged": {
     "src/**/*.{js,ts}": [
@@ -95,6 +88,7 @@
     "lint": "eslint src/**/*.{ts,tsx}",
     "release": "semantic-release",
     "release:local": "semantic-release --no-ci --dry-run",
-    "ci:action-trigger": "bash ./scripts/trigger-github-action.sh"
+    "ci:action-trigger": "bash ./scripts/trigger-github-action.sh",
+    "pre-commit": "lint-staged"
   }
 }
