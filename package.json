@@ -60,9 +60,9 @@
     "typescript": "^4.3.2"
   },
   "lint-staged": {
-    "src/**/*.{js,ts}": [
-      "yarn format",
-      "git add"
+    "*.{js,jsx,ts,tsx}": [
+      "npm run format",
+      "eslint --ext .js,.jsx --fix-dry-run"
     ]
   },
   "browserslist": {
