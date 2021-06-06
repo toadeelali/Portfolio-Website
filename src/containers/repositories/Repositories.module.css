@@ -1,7 +1,9 @@
 @value breakpoint-md from '../../assets/styles/variables.css';
 @value breakpoint-lg from '../../assets/styles/variables.css';
 
-.section-repositories { background-color: var(--color-bg-section); }
+.section-repositories {
+  background-color: var(--color-bg-section);
+}
 
 .list {
   display: grid;
@@ -38,10 +40,11 @@
 
 .link-wrapper {
   display: flex;
-  align-items: center;
 }
 
-.icon { font-size: 1.26rem; }
+.icon {
+  font-size: 1.26rem;
+}
 
 .name {
   flex-grow: 1;
@@ -50,9 +53,49 @@
   font-weight: 700;
 }
 
-.placed-at {
+
+/* ----- List Card: content ----- */
+.logo {
   width: 26px;
   height: 26px;
+  max-width: 26px;
+  max-height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  margin-right: 0;
+  background-image: url('../../assets/images/jobs/jobs.jpg');
+  background-repeat: no-repeat;
+  background-size: 200px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.logo-achieve {
+  background-position: 3px 1px;
+  background-size: 175px;
+}
+
+.logo-kp {
+  background-position: -25px 0px;
+  background-size: 100px;
+}
+
+.logo-ewi {
+  background-position: -48px 0px;
+  background-size: 100px;
+}
+
+.logo-ranic {
+  background-position: -150px 0;
+}
+
+.logo-git {
+  background-image: url('../../assets/images/social/github.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .description {

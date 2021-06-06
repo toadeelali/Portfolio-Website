@@ -5,7 +5,7 @@ import styles from './Repositories.module.css'
 import {RepositoriesData, SingleProjectModel} from './RepositoriesData'
 import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
-import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
+// import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
 
 const Repositories = memo(() => {
   const personalityId = useSelector((state: any) => state.personality.data.id)
@@ -26,9 +26,10 @@ const Repositories = memo(() => {
                 <span className={styles['link-wrapper']}>
                   <i className={styles.icon}>{repository.icon}</i>
                   <span className={styles.name}>{repository.name}</span>
-                  <span className={styles['placed-at']}>
+                  {/* <span className={styles['placed-at']}>
                     <GithubLogo />
-                  </span>
+                  </span> */}
+                  <span className={`${styles.logo} ${styles[repository.companyLogo + '']}`} />
                 </span>
                 <span className={styles.description}>{repository.description}</span>
               </a>
