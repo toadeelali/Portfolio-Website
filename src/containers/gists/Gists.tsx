@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
 import {useSelector} from 'react-redux'
 
-import translationEN from 'locales/en/translation.json';
+import translationEN from 'locales/en/translation.json'
 
 import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
@@ -19,7 +19,7 @@ import {GistsEnum} from './models'
 const Gists = () => {
   const fetchGists = useFetchGists()
   const gistsState: GistsState = useSelector((state: any) => state.gists)
-  const {gists, error} = translationEN;
+  const {gists, error} = translationEN
 
   useEffect(() => {
     let ignore = false
@@ -72,4 +72,4 @@ const Gists = () => {
   )
 }
 
-export default Gists;
+export default Gists

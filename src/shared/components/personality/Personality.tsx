@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
 
 import styles from './Personality.module.css'
 
@@ -30,13 +29,7 @@ const Personality = (props: Props) => {
         `}
         onClick={props.events?.onClick}
       >
-        <img
-          className={styles.picture}
-          src={props.image?.src}
-          alt={props.image?.alt}
-          height="120"
-          width="120"
-        />
+        <img className={styles.picture} src={props.image?.src} alt={props.image?.alt} height="120" width="120" />
       </div>
       <p className={styles.text}>{props.text}</p>
     </div>

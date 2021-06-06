@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback} from 'react'
+import {useEffect, useCallback} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 
 import {storageService} from '../../services/StorageService'
@@ -15,12 +15,15 @@ const Theme = () => {
   const toggleTheme = () =>
     themeState.value === ThemeEnum.light ? storeTheme(ThemeEnum.dark) : storeTheme(ThemeEnum.light)
 
-  const storeTheme = useCallback((theme: string) => {
-    const cond = theme === ThemeEnum.dark ? ThemeEnum.dark : ThemeEnum.light
+  const storeTheme = useCallback(
+    (theme: string) => {
+      const cond = theme === ThemeEnum.dark ? ThemeEnum.dark : ThemeEnum.light
 
-    storageService.setItem('theme', cond)
-    dispatch(actions.setTheme(theme))
-  }, [dispatch])
+      storageService.setItem('theme', cond)
+      dispatch(actions.setTheme(theme))
+    },
+    [dispatch]
+  )
 
   useEffect(() => {
     const [savedTheme] = storageService.getItem('theme', false)

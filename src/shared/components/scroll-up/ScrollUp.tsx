@@ -1,7 +1,5 @@
-import React from 'react'
-
 import styles from './ScrollUp.module.css'
-import translationEN from 'locales/en/translation.json';
+import translationEN from 'locales/en/translation.json'
 
 import {ReactComponent as ArrowUpIcon} from '../../../assets/images/icons/arrow-up.svg'
 
@@ -21,4 +19,4 @@ const ScrollUp = () => {
   )
 }
 
-export default ScrollUp;
+export default ScrollUp

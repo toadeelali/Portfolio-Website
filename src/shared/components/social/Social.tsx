@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from './Social.module.css'
 import {SocialData, SocialModel} from './SocialData'
 
@@ -21,4 +19,4 @@ const Social = ({props}: any) => {
   )
 }
 
-export default Social;
+export default Social

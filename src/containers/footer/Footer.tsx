@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Footer.module.css'
 
 import Social from 'shared/components/social/Social'

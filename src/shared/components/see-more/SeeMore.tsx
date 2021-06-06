@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './SeeMore.module.css'
 
 const SeeMore = ({t, props}: any) => {
@@ -11,4 +10,4 @@ const SeeMore = ({t, props}: any) => {
   )
 }
 
-export default SeeMore;
+export default SeeMore

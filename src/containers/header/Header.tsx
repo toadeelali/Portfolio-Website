@@ -1,18 +1,18 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useState, useEffect, useCallback} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 
-import styles from './Header.module.css';
-import {HeaderData} from './HeaderData';
-import * as actions from './redux/HeaderActions';
-import Personality from 'shared/components/personality/Personality';
-import {HeaderEnum} from './models/HeaderEnum';
+import styles from './Header.module.css'
+import {HeaderData} from './HeaderData'
+import * as actions from './redux/HeaderActions'
+import Personality from 'shared/components/personality/Personality'
+import {HeaderEnum} from './models/HeaderEnum'
 
 const Header = () => {
-  const headerData = HeaderData();
-  const dispatch = useDispatch();
-  const [stateRef, setStateRef]: any = useState({count: 0, active: '', launched: false});
-  const languageState = useSelector((state: any) => state.language);
-  const personalityState = useSelector((state: any) => state.personality);
+  const headerData = HeaderData()
+  const dispatch = useDispatch()
+  const [stateRef, setStateRef]: any = useState({count: 0, active: '', launched: false})
+  const languageState = useSelector((state: any) => state.language)
+  const personalityState = useSelector((state: any) => state.personality)
 
   const onClickPicture = useCallback(() => {
     setStateRef({active: 'active', count: stateRef.count})
@@ -20,7 +20,7 @@ const Header = () => {
     setTimeout(() => {
       setStateRef({active: undefined, count: stateRef.count < headerData.length - 1 ? stateRef.count + 1 : 0})
     }, HeaderEnum.animationDelay)
-  }, [stateRef.count, headerData]);
+  }, [stateRef.count, headerData])
 
   const togglePersonality = useCallback(
     (personality: any) => {
@@ -29,15 +29,15 @@ const Header = () => {
       document.body.classList.add(`primary-color-${personality.color}`)
     },
     [dispatch]
-  );
+  )
 
   useEffect(() => {
     if (!stateRef.launched) {
-      dispatch(actions.getPersonality());
-      togglePersonality({...headerData[stateRef.count]});
-      setStateRef({...stateRef, launched: true});
+      dispatch(actions.getPersonality())
+      togglePersonality({...headerData[stateRef.count]})
+      setStateRef({...stateRef, launched: true})
     }
-  }, [stateRef, languageState, dispatch, togglePersonality, headerData]);
+  }, [stateRef, languageState, dispatch, togglePersonality, headerData])
 
   return (
     <section className={`section ${styles['section-header']}`}>
@@ -78,4 +78,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Header

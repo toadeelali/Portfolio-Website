@@ -1,5 +1,3 @@
-import React from 'react'
-
 import styles from './Work.module.css'
 import {WorkData, WorkModel} from './WorkData'
 import Headings from 'shared/components/headings/Headings'

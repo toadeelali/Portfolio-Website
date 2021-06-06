@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './GistsList.module.css'
 import {GistDOMModel, GistLogoDOMModel} from '../models'
 import TechLogo from 'shared/components/tech-logo/TechLogo'

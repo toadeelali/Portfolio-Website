@@ -1,4 +1,4 @@
-import React, {memo} from 'react'
+import {memo} from 'react'
 import {useSelector} from 'react-redux'
 
 import styles from './Repositories.module.css'
@@ -8,8 +8,8 @@ import SeeMore from 'shared/components/see-more/SeeMore'
 import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
 
 const Repositories = memo(() => {
-  const personalityId = useSelector((state: any) => state.personality.data.id);
-  const repositoriesData = RepositoriesData()[personalityId];
+  const personalityId = useSelector((state: any) => state.personality.data.id)
+  const repositoriesData = RepositoriesData()[personalityId]
 
   return (
     <section className={`section ${styles['section-repositories']}`}>
@@ -37,13 +37,13 @@ const Repositories = memo(() => {
         </ul>
         <SeeMore
           props={{
-            text:repositoriesData.seeMore,
+            text: repositoriesData.seeMore,
             url: repositoriesData.url
           }}
         />
       </div>
     </section>
   )
-});
+})
 
-export default Repositories;
+export default Repositories

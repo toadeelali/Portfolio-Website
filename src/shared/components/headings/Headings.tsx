@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Headings.module.css'
 
 const Headings = (props: any) => {
