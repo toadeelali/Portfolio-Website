@@ -273,11 +273,11 @@
   .list-item-card::before {
     top: 50%;
     right: 0;
-    left: calc(100% + 57px);
+    left: calc(100% + 59px);
     transform: translateY(-50%);
   }
 
-  .list-item-left .list-item-card::before { left: -67px; }
+  .list-item-left .list-item-card::before { left: -69px; }
 
   .list-item-left .list-item-date { 
     order: 0; 
