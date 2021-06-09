@@ -109,11 +109,28 @@ export const RepositoriesData = (): RepositoryModel[] => [
     collection: [
       {
         icon: '🤖',
+        companyLogo: 'logo-achieve',
+        name: 'Achieve Test Prep',
+        url: 'https://prep.achievetestprep.com/',
+        description:
+          'A learning management system to help the students to achieve more in less time and using less money.',
+        status: 'done'
+      },
+      {
+        icon: '🤖',
         companyLogo: 'logo-kp',
         name: '1on1 Quiz',
         url: 'https://1on1quiz.com',
         description: '1on1 Quiz - Competitive gaming platform',
-        status: 'in-progress'
+        status: 'done'
+      },
+      {
+        icon: '🤖',
+        companyLogo: 'logo-kp',
+        name: 'Content Management System',
+        url: 'https://rcms.beaconhouse.net/',
+        description: 'A multi platforms(LMS) supported content management system',
+        status: 'done'
       },
       {
         icon: '🤖',
