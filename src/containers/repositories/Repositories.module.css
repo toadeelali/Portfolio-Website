@@ -51,6 +51,7 @@
   padding: 0 0.5rem;
   font-size: 1.2rem;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 
@@ -74,8 +75,8 @@
 }
 
 .logo-achieve {
-  background-position: 3px 1px;
-  background-size: 175px;
+  background-position: 0;
+  background-size: 140px;
 }
 
 .logo-kp {
