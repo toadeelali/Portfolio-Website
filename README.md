@@ -1,4 +1,6 @@
-![CI CD](https://github.com/wikz/Portfolio-Website/workflows/CI%20CD/badge.svg)
+![CI](https://github.com/wikz/Portfolio-Website/workflows/CI%20CD/badge.svg)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d7d596a6-3d87-4fce-bbcb-00d0f640ffda/deploy-status)](https://app.netlify.com/sites/theadeel/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
