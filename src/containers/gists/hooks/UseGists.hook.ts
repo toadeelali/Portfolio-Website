@@ -15,7 +15,7 @@ export const useFetchGists = () => {
 
       gistsService.saveGists(gistsData)
       dispatch(actions.fetchGistsSuccess(gistsData))
-    } catch (error) {
+    } catch (error: any) {
       dispatch(actions.fetchGistsFailure(error))
     }
   }, [dispatch])
