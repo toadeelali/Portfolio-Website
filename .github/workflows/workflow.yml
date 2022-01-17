@@ -29,6 +29,11 @@ jobs:
       - name: Run Build
         if: success()
         run: npm run build
+         env:
+          NODE_ENV: production
+          PUBLIC_URL: https://theadeel.com
+          REACT_APP_GH_TOKEN: ${{ secrets.REACT_APP_GH_TOKEN }}
+
 
       - name: Upload Build Artifact
         if: success()
