@@ -1,6 +1,3 @@
-@value breakpoint-sm from '../../assets/styles/variables.css';
-@value breakpoint-lg from '../../assets/styles/variables.css';
-
 .section-header { 
   padding-top: 3rem;
   text-align: center; 
@@ -95,7 +92,7 @@
 
 .personality-bio { color: var(--color-primary); }
 
-@media only screen and (min-width: breakpoint-sm) {
+@media only screen and (min-width: 576px) {
   .section-header { 
     padding-top: 2rem;
   }
@@ -131,7 +128,7 @@
   .bio-wrapper { max-width: 78%; }
 }
 
-@media (min-width: breakpoint-lg) {
+@media (min-width: 992px) {
   .bio-wrapper {
     max-width: 70%;
     margin: 4rem auto;

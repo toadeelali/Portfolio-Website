@@ -1,6 +1,3 @@
-@value breakpoint-md from '../../assets/styles/variables.css';
-@value breakpoint-lg from '../../assets/styles/variables.css';
-
 .section-repositories {
   background-color: var(--color-bg-section);
 }
@@ -109,14 +106,14 @@
   }
 }
 
-@media (min-width: breakpoint-md) {
+@media (min-width: 768px) {
   .list {
     margin: 4rem auto;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: breakpoint-lg) {
+@media (min-width: 992px) {
   .list {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;

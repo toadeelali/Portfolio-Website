@@ -31,8 +31,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          PUBLIC_URL: https://theadeel.com
-          REACT_APP_GH_TOKEN: ${{ secrets.REACT_APP_GH_TOKEN }}
+          VITE_GH_TOKEN: ${{ secrets.VITE_GH_TOKEN }}
 
       - name: Upload Build Artifact
         if: success()

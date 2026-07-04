@@ -1,4 +1,4 @@
-const isDevelopment = (): Boolean => process.env.NODE_ENV === 'development'
+const isDevelopment = (): Boolean => import.meta.env.DEV
 
 export const envService = {
   isDevelopment

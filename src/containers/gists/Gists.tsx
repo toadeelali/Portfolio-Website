@@ -6,7 +6,7 @@ import translationEN from 'locales/en/translation.json'
 import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
 import Loading from 'shared/components/loading/Loading'
-import {ReactComponent as GitHubLogo} from 'assets/images/social/github.svg'
+import GitHubLogo from 'assets/images/social/github.svg?react'
 
 import {domService} from 'shared/services/DOMService'
 import {GistsState} from './redux/GistsReducer'

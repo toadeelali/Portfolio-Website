@@ -5,7 +5,7 @@ import {GitHubAPIEnum} from '../models/GithubAPIEnum'
 const getHeaders = (headersParams = {}) => ({
   ...(envService.isDevelopment() && {
     headers: {
-      Authorization: `token ${process.env.REACT_APP_GH_TOKEN}`,
+      Authorization: `token ${import.meta.env.VITE_GH_TOKEN}`,
       ...headersParams
     }
   })

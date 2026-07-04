@@ -1,7 +1,7 @@
 import styles from './ScrollUp.module.css'
 import translationEN from 'locales/en/translation.json'
 
-import {ReactComponent as ArrowUpIcon} from '../../../assets/images/icons/arrow-up.svg'
+import ArrowUpIcon from '../../../assets/images/icons/arrow-up.svg?react'
 
 const ScrollUp = () => {
   const scrollTop = () =>
