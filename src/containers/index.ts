@@ -1,5 +1,0 @@
-export {default as Work} from './work/Work'
-export {default as Repositories} from './repositories/Repositories'
-export {default as Header} from './header/Header'
-export {default as Gists} from './gists/Gists'
-export {default as Footer} from './footer/Footer'

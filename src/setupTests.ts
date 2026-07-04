@@ -1,5 +1,0 @@
-process.env.DEV = 'false'
-process.env.PROD = 'false'
-process.env.MODE = 'test'
-process.env.BASE_URL = '/'
-process.env.VITE_GH_TOKEN = ''
