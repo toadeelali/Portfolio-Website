@@ -4,8 +4,10 @@ import svgr from 'vite-plugin-svgr'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import {defineConfig} from 'vite'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 export default defineConfig({
-  plugins: [react(), svgr(), tsconfigPaths()],
+  plugins: [react(), svgr(), tsconfigPaths(), cloudflare()],
   server: {
     port: 3000,
     open: true
