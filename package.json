@@ -73,18 +73,20 @@
     ]
   },
   "scripts": {
-    "start": "vite",
     "build": "vite build",
     "build:local": "npm run build && vite preview",
-    "preview": "vite preview",
     "test": "vitest run --silent",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
-    "lint": "eslint .",
     "release": "semantic-release",
     "release:local": "semantic-release --no-ci --dry-run",
     "ci:action-trigger": "bash ./scripts/trigger-github-action.sh",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
   }
 }
