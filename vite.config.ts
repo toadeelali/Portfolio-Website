@@ -1,14 +1,17 @@
 /// <reference types="vitest" />
+import {cloudflare} from '@cloudflare/vite-plugin'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import {fileURLToPath} from 'node:url'
 import path from 'node:path'
 import {defineConfig} from 'vite'
 import svgr from 'vite-plugin-svgr'
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const srcDir = path.resolve(__dirname, 'src')
 
 export default defineConfig({
-  plugins: [react(), svgr({include: '**/*.svg'}), tailwindcss()],
+  plugins: [cloudflare(), react(), svgr({include: '**/*.svg'}), tailwindcss()],
   resolve: {
     alias: {
       'redux/store': path.resolve(srcDir, 'redux/store'),
