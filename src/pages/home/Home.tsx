@@ -1,7 +1,5 @@
+import {Footer, Gists, Header, Repositories, Work} from 'containers'
 import {useEffect, useState} from 'react'
-import {Header, Gists, Footer, Work, Repositories} from 'containers'
-
-import './Home.module.css'
 
 const Home = () => {
   const [fadeIntro, setFadeIntro]: any = useState(false)
@@ -13,7 +11,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div className={`home  ${fadeIntro ? 'home-initialized' : ''}`}>
+    <div className={` ${fadeIntro ? 'animate-fade-content' : ''}`}>
       <Header />
       <Repositories />
       <Work />

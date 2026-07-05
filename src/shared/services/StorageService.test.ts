@@ -1,5 +1,4 @@
 import {storageService} from './StorageService'
-import {vi} from 'vitest'
 
 describe('Storage Service', () => {
   const value = JSON.stringify({foo: 'bar'})
@@ -75,6 +74,7 @@ describe('Storage Service', () => {
       expect(error.error).toBeInstanceOf(TypeError)
       expect(error.name).toEqual('Unable to set item into localStorage')
       expect(error.error.toString()).toEqual('TypeError: api.setItem is not a function')
+      expect(window.localStorage.setItem).toBeUndefined()
     })
 
     it('should return same value passed', () => {

@@ -1,4 +1,3 @@
-import styles from './Work.module.css'
 import {WorkData, WorkModel} from './WorkData'
 import Headings from 'shared/components/headings/Headings'
 
@@ -11,43 +10,42 @@ const Work = () => {
   const {work} = translationEN
 
   return (
-    <section className={`section ${styles['section-work']}`}>
+    <section className="section">
       <div className="section-content">
         <Headings title={work.title} subtitle={work.subtitle} />
 
-        <div className={styles.content}>
-          <div className={styles.about}>
-            <h4 className={styles['about-title']}>{work.journey.title}</h4>
+        <div className="flex flex-col justify-between lg:flex-row lg:my-16">
+          <div className="order-1 mt-12 lg:order-0 lg:mt-4 lg:pr-4 lg:w-[calc(100%-704px)]">
+            <h4 className="mb-1 text-[1.2rem] font-semibold leading-[1.9rem]">{work.journey.title}</h4>
             <p dangerouslySetInnerHTML={{__html: work.journey.intro}} />
 
-            <a className={styles.ad} href="https://www.linkedin.com/in/wikz87/" title={work['see-more']}>
+            <a className="link my-6 flex items-center justify-center border-t border-dashed border-primary py-0 text-center leading-[3rem]" href="https://www.linkedin.com/in/wikz87/" title={work['see-more']}>
               <em>{work['see-more']}</em>
             </a>
 
             <p dangerouslySetInnerHTML={{__html: work.journey.body}} />
-
             <p dangerouslySetInnerHTML={{__html: work.journey.conclusion}} />
           </div>
 
-          <ul className={`${styles.list}`}>
-            {workData.map((work: WorkModel, i: number) => (
-              <li key={i} className={`${styles['list-item']} ${oddJob(i) ? styles['list-item-left'] : ''}`}>
+          <ul className="timeline flex flex-col lg:w-[670px] lg:h-full lg:m-0">
+            {workData.map((workItem: WorkModel, i: number) => (
+              <li key={i} className={`grid gap-0 lg:grid-cols-[342px_auto] lg:items-center lg:mt-5 lg:justify-start ${oddJob(i) ? 'timeline-left lg:grid-cols-[auto_auto] lg:self-end lg:pr-1' : ''}`}>
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  className={styles['list-item-card']}
-                  href={work.url}
-                  title={work.title}
+                  className="timeline-card card card-hover [&:hover>div>.name]:text-primary"
+                  href={workItem.url}
+                  title={workItem.title}
                 >
-                  <span className={`${styles.logo} ${styles[work.logo + '']}`}>{work.title}</span>
+                  <span className={`job-logo size-[50px] max-w-[50px] max-h-[50px] min-w-[50px] min-h-[50px] mr-3 job-logo-${workItem.logo}`}>{workItem.title}</span>
                   <div>
-                    <div className={styles.title}>{work.title}</div>
-                    <div className={styles.position}>{work.position}</div>
+                    <div className="name text-[0.9rem] font-semibold">{workItem.title}</div>
+                    <div className="pt-0.5 text-[0.8rem]">{workItem.position}</div>
                   </div>
                 </a>
-                <div className={styles['list-item-date']}>
-                  <span>{work.year}</span>
-                  <span>{work.country}</span>
+                <div className="timeline-date">
+                  <span>{workItem.year}</span>
+                  <span>{workItem.country}</span>
                 </div>
               </li>
             ))}

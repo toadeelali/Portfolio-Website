@@ -1,5 +1,5 @@
 import {GistFilesModel, GistLogoDOMModel, GistModel} from '../models'
-import githubLogo from '../../../assets/images/social/github.svg'
+import githubLogo from '../../../assets/images/social/github.svg?url'
 
 const REGEX_LOGO_FILENAME = /^(\w+)-logo.svg/
 

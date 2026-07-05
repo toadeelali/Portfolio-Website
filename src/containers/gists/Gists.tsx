@@ -6,11 +6,10 @@ import translationEN from 'locales/en/translation.json'
 import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
 import Loading from 'shared/components/loading/Loading'
-import GitHubLogo from 'assets/images/social/github.svg?react'
+import GitHubLogo from 'assets/images/social/github.svg'
 
 import {domService} from 'shared/services/DOMService'
 import {GistsState} from './redux/GistsReducer'
-import styles from './Gists.module.css'
 import Message from './components/Message'
 import GistsList from './components/GistsList'
 import {useFetchGists} from './hooks/UseGists.hook'
@@ -38,10 +37,10 @@ const Gists = () => {
   }, [fetchGists])
 
   return (
-    <section id="section-gists" className={`section ${styles['section-gists']}`}>
+    <section id="section-gists" className="section bg-section relative min-h-[300px]">
       <div className="section-content">
         {gistsState.isLoading ? (
-          <Loading className={styles['gists-loading']} image={GitHubLogo} text="Loading Gists..." />
+          <Loading className="[&_svg]:w-[84px] [&_svg]:animate-loading-animation" image={GitHubLogo} text="Loading Gists..." />
         ) : (
           <>
             <Headings title={gists.title} subtitle={gists.subtitle} />
@@ -51,7 +50,6 @@ const Gists = () => {
             ) : (
               <>
                 <GistsList
-                  className={styles.list}
                   collection={gistsState?.data?.collection}
                   logos={gistsState?.data?.logos}
                   noGistsMessage={gists['no-gists']}

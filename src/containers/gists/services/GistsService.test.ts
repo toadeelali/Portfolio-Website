@@ -1,8 +1,8 @@
-import {vi} from 'vitest'
+import { vi } from 'vitest'
 
-import {gistsService} from './GistsService'
+import { gistsService } from './GistsService'
 
-import {gistsResponseMock} from '../../../../test/mocks'
+import { gistsResponseMock } from '../../../../test/mocks'
 
 describe.skip('Gists Service', () => {
   beforeEach(() => {
@@ -13,16 +13,18 @@ describe.skip('Gists Service', () => {
       },
       writable: true
     })
+
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue({
+      json: () => Promise.resolve(gistsResponseMock),
+    } as Response)
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
   })
 
   describe('Fetching Gists', () => {
     it('getGists: return fetched gists', async () => {
-      const mockResponse = vi.fn()
-      window.fetch = mockResponse
-      mockResponse.mockResolvedValueOnce({
-        json: () => Promise.resolve(gistsResponseMock)
-      })
-
       const result = await gistsService.getGists()
 
       expect(result).toMatchSnapshot()

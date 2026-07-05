@@ -1,5 +1,3 @@
-import styles from './Message.module.css'
-
 interface Props {
   show: boolean
   message: string
@@ -10,7 +8,7 @@ const Message = (props: Props) => {
   return (
     <>
       {props.show && (
-        <p className={`${styles.message} ${styles.className}`}>
+        <p className={`py-16 text-center ${props.className || ''}`}>
           <span role="img" aria-label="Confused Face">
             😕
           </span>{' '}

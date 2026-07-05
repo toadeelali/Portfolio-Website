@@ -1,5 +1,3 @@
-import styles from './TechLogo.module.css'
-
 interface Props {
   source: {
     name: string
@@ -12,7 +10,7 @@ interface Props {
 const TechLogo = (props: Props) => {
   return (
     <img
-      className={`${styles.logo} ${props.logoClassName || ''} ${props.source.className || ''}`}
+      className={`w-8 ${props.logoClassName || ''} ${props.source.className || ''}`}
       src={props.source.url}
       alt={props.source.name}
       title={props.source.name}

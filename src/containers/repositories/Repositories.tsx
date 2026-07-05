@@ -1,37 +1,32 @@
 import {memo} from 'react'
 import {useSelector} from 'react-redux'
 
-import styles from './Repositories.module.css'
 import {RepositoriesData, SingleProjectModel} from './RepositoriesData'
 import Headings from 'shared/components/headings/Headings'
 import SeeMore from 'shared/components/see-more/SeeMore'
-// import {ReactComponent as GithubLogo} from 'assets/images/social/github.svg'
 
 const Repositories = memo(() => {
   const personalityId = useSelector((state: any) => state.personality.data.id)
   const repositoriesData = RepositoriesData()[personalityId]
 
   return (
-    <section className={`section ${styles['section-repositories']}`}>
+    <section className="section bg-section">
       <div className="section-content">
         <Headings title={repositoriesData.title} subtitle={repositoriesData.subtitle} />
 
-        <ul className={`${styles.list}`}>
+        <ul className="mx-auto my-12 grid grid-cols-1 gap-12 md:my-16 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1200px]">
           {repositoriesData.collection.map((repository: SingleProjectModel, i: number) => (
-            <li key={i} className={styles['list-item']}>
-              <a className={styles.link} href={repository.url} title={repository.name} target="blank">
+            <li key={i}>
+              <a className="card card-hover relative flex h-full flex-col overflow-hidden rounded-lg [&:hover>span]:text-primary" href={repository.url} title={repository.name} target="blank">
                 {repository.status === 'in-progress' && (
-                  <span className={styles.status}>{repository.status === 'in-progress' ? repository.status : ''}</span>
+                  <span className="ribbon">{repository.status}</span>
                 )}
-                <span className={styles['link-wrapper']}>
-                  <i className={styles.icon}>{repository.icon}</i>
-                  <span className={styles.name}>{repository.name}</span>
-                  {/* <span className={styles['placed-at']}>
-                    <GithubLogo />
-                  </span> */}
-                  <span className={`${styles.logo} ${styles[repository.companyLogo + '']}`} />
+                <span className="flex">
+                  <i className="text-[1.26rem]">{repository.icon}</i>
+                  <span className="flex-grow px-2 text-[1.2rem] font-bold leading-[1.25]">{repository.name}</span>
+                  <span className={`repo-logo repo-logo-${repository.companyLogo}`} />
                 </span>
-                <span className={styles.description}>{repository.description}</span>
+                <span className="pt-4">{repository.description}</span>
               </a>
             </li>
           ))}

@@ -1,5 +1,3 @@
-import styles from './Loading.module.css'
-
 interface Props {
   className?: string
   text?: string
@@ -9,13 +7,13 @@ interface Props {
 
 const Loading = (props: Props) => {
   return (
-    <div className={`${styles['loading-wrapper']} ${props.className}`}>
+    <div className={`absolute inset-0 z-10 flex items-center justify-center text-center transition-all duration-[0.06s] bg-[rgba(var(--loading-bg-color),0.5)] ${props.className || ''}`}>
       {props.component ? (
         <>{props.component}</>
       ) : (
         <div>
           {props.image && <props.image />}
-          {props.text && <p className={styles.loading}>{props?.text}</p>}
+          {props.text && <p>{props?.text}</p>}
         </div>
       )}
     </div>

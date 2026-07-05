@@ -1,5 +1,5 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 import './styles'
 
 import App from './App'
@@ -7,10 +7,12 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import smoothscroll from 'smoothscroll-polyfill'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const root = createRoot(document.getElementById('root')!)
+
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>
+  </React.StrictMode>,
 )
 
 serviceWorker.register()
