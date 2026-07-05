@@ -73,6 +73,7 @@
     ]
   },
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "build:local": "npm run build && vite preview",
     "test": "vitest run --silent",
@@ -81,7 +82,6 @@
     "release:local": "semantic-release --no-ci --dry-run",
     "ci:action-trigger": "bash ./scripts/trigger-github-action.sh",
     "pre-commit": "lint-staged",
-    "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
