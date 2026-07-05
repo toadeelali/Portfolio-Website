@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-16x16.png" sizes="16x16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#454545" />
-  <link rel="apple-touch-icon" href="/favicon-57x57.png" />
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon-57x57.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
   <meta name="author" content="Adeel Ali | Software Engineer">
   <meta name="description" content="Software Engineer | JavaScript Developer | Technology Enthusiast">
@@ -42,7 +42,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/worker.js').then(function(registration) {
+        navigator.serviceWorker.register('worker.js').then(function(registration) {
         }, function(err) {
         }).catch(function(err) {
         });
@@ -51,7 +51,6 @@
       console.log('Service Worker is not supported by browser.');
     }
   </script>
-  <script type="module" src="/src/index.tsx"></script>
 </body>
 
 </html>

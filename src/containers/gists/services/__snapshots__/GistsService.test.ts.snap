@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gists Service Fetching Gists getGists: return fetched gists 1`] = `
+Object {
+  "collection": Array [
+    Object {
+      "files": Array [
+        Object {
+          "filename": "intl-datetime-format.js",
+          "language": "JavaScript",
+          "raw_url": "https://gist.githubusercontent.com/wikz/6550840f43473d5b54d4e9232ba67ab0/raw/f6bdae2a990c20e5ac1578e90bc3cd77f4ce795e/intl-datetime-format.js",
+          "size": 573,
+          "type": "application/javascript",
+        },
+      ],
+      "id": "6550840f43473d5b54d4e9232ba67ab0",
+      "language": "JavaScript",
+      "title": "Formatting date with Intl.DateTimeFormat",
+      "url": "https://gist.github.com/6550840f43473d5b54d4e9232ba67ab0",
+    },
+    Object {
+      "files": Array [
+        Object {
+          "filename": "dark-mode.css",
+          "language": "CSS",
+          "raw_url": "https://gist.githubusercontent.com/wikz/9e575e3a22813fdd3ab76aa33946a766/raw/ffba0089e8db90414cfc356935b1611afe6ebb52/dark-mode.css",
+          "size": 613,
+          "type": "text/css",
+        },
+      ],
+      "id": "9e575e3a22813fdd3ab76aa33946a766",
+      "language": "CSS",
+      "title": "Easiest way to add Dark Mode",
+      "url": "https://gist.github.com/9e575e3a22813fdd3ab76aa33946a766",
+    },
+    Object {
+      "files": Array [
+        Object {
+          "filename": "git-clean-branches-alias.sh",
+          "language": "Shell",
+          "raw_url": "https://gist.githubusercontent.com/wikz/102ed3ae45494862c9b1381fb6749275/raw/81f54d34973ae1419b3fa5724b2571e08b5d17f5/git-clean-branches-alias.sh",
+          "size": 306,
+          "type": "application/x-sh",
+        },
+      ],
+      "id": "102ed3ae45494862c9b1381fb6749275",
+      "language": "Git",
+      "title": "Clean Branches Alias",
+      "url": "https://gist.github.com/102ed3ae45494862c9b1381fb6749275",
+    },
+    Object {
+      "files": Array [
+        Object {
+          "filename": ".hyper.js",
+          "language": "JavaScript",
+          "raw_url": "https://gist.githubusercontent.com/wikz/2980bf771357f4caab71e8ae571f10c9/raw/e78cec2e2086dab2e96e766b401d08312a6e67a2/.hyper.js",
+          "size": 5898,
+          "type": "application/javascript",
+        },
+      ],
+      "id": "2980bf771357f4caab71e8ae571f10c9",
+      "language": "JavaScript",
+      "title": "Terminal: My Hyper Configuration",
+      "url": "https://gist.github.com/2980bf771357f4caab71e8ae571f10c9",
+    },
+    Object {
+      "files": Array [
+        Object {
+          "filename": "get-latest-tag-on-git.sh",
+          "language": "Shell",
+          "raw_url": "https://gist.githubusercontent.com/wikz/5b5503c60df6371c22d611a0c87c2821/raw/486a95da7c14fbd3c5cc7801f273bf72a9a28ea8/get-latest-tag-on-git.sh",
+          "size": 637,
+          "type": "application/x-sh",
+        },
+      ],
+      "id": "5b5503c60df6371c22d611a0c87c2821",
+      "language": "Git",
+      "title": "Getting the latest tag",
+      "url": "https://gist.github.com/5b5503c60df6371c22d611a0c87c2821",
+    },
+  ],
+  "date": 1592786022162,
+  "logos": Array [],
+}
+`;

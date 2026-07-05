@@ -1,0 +1,65 @@
+{
+  "position": {
+    "software-engineer": "Software Engineer",
+    "mobile-apps-developer": "Mobile Apps Developer",
+    "front-end-developer": "Front-End Developer",
+    "games-developer": "Games Developer"
+  },
+  "header": {
+    "hint": "Click me!",
+    "greeting": "Hi, my name is",
+    "name": "Adeel Ali",
+    "punch-line": "I build things for the web and love what I do",
+    "bio": "Mainly focused on <strong>Front-end Development</strong> with a good <strong>UI/UX</strong> eye and always trying different things.",
+    "default": {
+      "bio-end": "I speak many languages but also JavaScript."
+    },
+    "headphones": {
+      "bio-end": "We need more JS Frameworks!"
+    },
+    "drawing": {
+      "bio-end": "Another skill: agile diaper changer."
+    },
+    "dude": {
+      "bio-end": "Remember when we cared about IE6?"
+    }
+  },
+  "work": {
+    "title": "Places that I’ve worked",
+    "subtitle": "Amazing and skilled people I've met",
+    "journey": {
+      "title": "My Journey",
+      "intro": "I started working with Embedded systems and programmed my first Robot in 2011. My professional career started in 2012 after completion of Bachelors in Computer Engineering degree. I always loved design + code but since I am not as close as a Designer (look at the design of this website) I became <strong>Software Engineer</strong>.",
+      "body": "I jump started my <strong>Mobile Apps and Games developer</strong> career in 2014 and till now I have developed more than 7+ cross platform educational games, 5+ cross platform mobile applications and helped in development of several other projects.",
+      "conclusion": "Now as <strong>Principal Software Engineer</strong>, I am responsible for cross team communication, mentoring, doing R&Ds, writing project requirement document (PRDs), libraries and frameworks."
+    },
+    "see-more": "Check more details on LinkedIn"
+  },
+  "gists": {
+    "title": "Latest Gists",
+    "subtitle": "Don’t have a blog yet but I have Gists!",
+    "see-more": "There's more",
+    "no-gists": "No Gists were found"
+  },
+  "see-more": {
+    "link": "See more"
+  },
+  "social": {
+    "titles": {
+      "linkedin": "Check my LinkedIn Profile",
+      "twitter": "Follow me on Twitter",
+      "github": "Judge my code on GitHub",
+      "spotify": "Great selection of tunes on Spotify"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "quote": "Made with a lot of anxiety during the <strong>COVID-19's quarantine</strong>."
+  },
+  "error": {
+    "message": "Sorry, something went wrong! Please, try again later."
+  },
+  "scroll-up": {
+    "title": "Go to the top!"
+  }
+}

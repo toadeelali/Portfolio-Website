@@ -1,25 +1,87 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "theadeel.com",
+  "version": "1.1.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "It's Adeel Ali",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+  "author": {
+    "name": "Adeel Ali",
+    "email": "wikz@live.com",
+    "url": "https://theadeel.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wikz/Portfolio-Website.git"
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-redux": "^9.3.0",
+    "redux": "^5.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@types/node": "^24.13.2",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.20.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@types/react-redux": "^7.1.34",
+    "@types/redux-mock-store": "^1.5.0",
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.62.1",
+    "@typescript-eslint/parser": "^8.62.1",
     "@vitejs/plugin-react": "^6.0.3",
-    "oxlint": "^1.71.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.1.1"
+    "eslint": "^9.39.4",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.9.4",
+    "redux-mock-store": "^1.5.5",
+    "sass": "^1.101.0",
+    "semantic-release": "^24.2.9",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.3",
+    "vite-plugin-svgr": "^4.5.0",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^3.2.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "build:local": "npm run build && vite preview",
+    "test": "vitest run --silent",
+    "test:watch": "vitest",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx,json}",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "release": "semantic-release",
+    "release:local": "semantic-release --no-ci --dry-run",
+    "ci:action-trigger": "bash ./scripts/trigger-github-action.sh",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run format",
+      "eslint --ext .js,.jsx,.ts,.tsx --fix-dry-run"
+    ]
   }
 }
