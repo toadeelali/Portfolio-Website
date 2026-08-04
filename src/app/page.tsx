@@ -65,7 +65,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to my org
+          Go to CodeGinx
         </a>
       </footer>
     </div>
