@@ -6,20 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+    "lint": "eslint",
+    "preview": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.19.9",
     "next": "16.2.12",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
