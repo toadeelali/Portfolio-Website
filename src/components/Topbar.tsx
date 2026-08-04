@@ -72,6 +72,7 @@ export function Topbar() {
         className={`nav-drawer${open ? " open" : ""}`}
         id="navDrawer"
         aria-hidden={!open}
+        inert={!open}
       >
         <div className="nav-drawer-head">
           <div className="logo">
