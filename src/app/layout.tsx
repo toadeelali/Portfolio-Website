@@ -1,8 +1,8 @@
+import { RevealObserver } from "@/components/RevealObserver";
+import { TitleBlock } from "@/components/TitleBlock";
+import { Topbar } from "@/components/Topbar";
 import type { Metadata } from "next";
 import { Big_Shoulders, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
-import { Topbar } from "@/components/Topbar";
-import { TitleBlock } from "@/components/TitleBlock";
-import { RevealObserver } from "@/components/RevealObserver";
 import "./globals.css";
 
 const display = Big_Shoulders({
@@ -37,19 +37,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable}`}
+      className={`js ${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body>
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: "document.documentElement.classList.add('js');",
           }}
-        />
-        <div className="sheet-wrap">
+        /> */}
+        <article className="sheet-wrap">
           <Topbar />
           {children}
           <TitleBlock />
-        </div>
+        </article>
         <RevealObserver />
       </body>
     </html>

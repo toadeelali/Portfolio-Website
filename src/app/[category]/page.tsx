@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { CategoryPage } from "@/components/CategoryPage";
 import { categories } from "@/data/projects";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
 

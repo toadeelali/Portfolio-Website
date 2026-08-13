@@ -22,7 +22,7 @@ export function RevealObserver() {
                 }
               }
             },
-            { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+            { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
           );
           io.observe(el);
           observers.add(io);
@@ -38,6 +38,9 @@ export function RevealObserver() {
       mo.disconnect();
       observers.forEach((io) => io.disconnect());
       observers.clear();
+      document
+        .querySelectorAll<HTMLElement>(".reveal[data-reveal-observed]")
+        .forEach((el) => delete el.dataset.revealObserved);
     };
   }, []);
 
