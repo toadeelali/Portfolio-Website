@@ -1,4 +1,4 @@
-import { email } from "@/config";
+import { email } from '@/config';
 
 export function TitleBlock() {
   return (
@@ -11,12 +11,7 @@ export function TitleBlock() {
           </div>
           <div className="tb-cell reveal">
             <span className="k">Firm</span>
-            <a
-              className="v"
-              href="https://codeginx.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="v" href="https://codeginx.com" target="_blank" rel="noopener noreferrer">
               CodeGinx
             </a>
           </div>
@@ -32,12 +27,7 @@ export function TitleBlock() {
           </div>
           <div className="tb-cell reveal">
             <span className="k">GitHub</span>
-            <a
-              className="v"
-              href="https://github.com/toadeelali"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="v" href="https://github.com/toadeelali" target="_blank" rel="noopener noreferrer">
               github.com/toadeelali
             </a>
           </div>

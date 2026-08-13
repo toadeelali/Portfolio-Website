@@ -51,16 +51,8 @@ a {
 
 .grid-bg {
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      var(--grid-line) 0 1px,
-      transparent 1px 32px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      var(--grid-line) 0 1px,
-      transparent 1px 32px
-    );
+    repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 32px),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 32px);
 }
 
 /* ---------- topbar ---------- */
@@ -241,7 +233,7 @@ a {
 }
 .reg-mark::before,
 .reg-mark::after {
-  content: "";
+  content: '';
   position: absolute;
   background: var(--muted-on-blue);
 }
@@ -622,11 +614,7 @@ table.rev-table {
 .project-thumb {
   position: relative;
   height: 200px;
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--grid-line-strong) 0 1px,
-    transparent 1px 11px
-  );
+  background-image: repeating-linear-gradient(45deg, var(--grid-line-strong) 0 1px, transparent 1px 11px);
   border-bottom: 1px solid var(--border-on-blue);
   display: flex;
   align-items: center;

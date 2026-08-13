@@ -1,5 +1,5 @@
-import Link from "next/link";
-import type { Category } from "@/data/projects";
+import Link from 'next/link';
+import type { Category } from '@/data/projects';
 
 export function CategoryHero({ category }: { category: Category }) {
   return (

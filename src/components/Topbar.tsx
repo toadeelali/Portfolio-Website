@@ -1,37 +1,37 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const navLinks = [
-  { label: "Work", href: "/#work", id: "work" },
-  { label: "Products", href: "/#products", id: "products" },
-  { label: "Experience", href: "/#experience", id: "experience" },
-  { label: "About", href: "/#about", id: "about" },
-  { label: "Contact", href: "/#contact", id: "contact" },
+  { label: 'Work', href: '/#work', id: 'work' },
+  { label: 'Products', href: '/#products', id: 'products' },
+  { label: 'Experience', href: '/#experience', id: 'experience' },
+  { label: 'About', href: '/#about', id: 'about' },
+  { label: 'Contact', href: '/#contact', id: 'contact' },
 ];
 
 export function Topbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const onSubPage = pathname !== "/";
+  const onSubPage = pathname !== '/';
 
   useEffect(() => {
     if (!open) return;
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === 'Escape') setOpen(false);
     };
     const onResize = () => {
       if (window.innerWidth >= 641) setOpen(false);
     };
-    document.addEventListener("keydown", onKey);
-    window.addEventListener("resize", onResize);
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
     return () => {
-      document.body.style.overflow = "";
-      document.removeEventListener("keydown", onKey);
-      window.removeEventListener("resize", onResize);
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
     };
   }, [open]);
 
@@ -39,17 +39,11 @@ export function Topbar() {
     <header className="topbar">
       <div className="inner">
         <Link className="logo" href="/">
-          ADEEL <span>{"// CODEGINX"}</span>
+          ADEEL <span>{'// CODEGINX'}</span>
         </Link>
         <nav className="nav-desktop">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={
-                onSubPage && link.id === "work" ? "current" : undefined
-              }
-            >
+            <Link key={link.href} href={link.href} className={onSubPage && link.id === 'work' ? 'current' : undefined}>
               {link.label}
             </Link>
           ))}
@@ -68,42 +62,24 @@ export function Topbar() {
         </button>
       </div>
 
-      <div
-        className={`nav-drawer${open ? " open" : ""}`}
-        id="navDrawer"
-        aria-hidden={!open}
-        inert={!open}
-      >
+      <div className={`nav-drawer${open ? 'open' : ''}`} id="navDrawer" aria-hidden={!open} inert={!open}>
         <div className="nav-drawer-head">
           <div className="logo">
-            ADEEL <span>{"// CODEGINX"}</span>
+            ADEEL <span>{'// CODEGINX'}</span>
           </div>
-          <button
-            type="button"
-            className="nav-close"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          >
+          <button type="button" className="nav-close" aria-label="Close menu" onClick={() => setOpen(false)}>
             ✕
           </button>
         </div>
         <nav className="nav-drawer-links">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-            >
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
               {link.label}
             </Link>
           ))}
         </nav>
       </div>
-      <div
-        className={`nav-backdrop${open ? " open" : ""}`}
-        aria-hidden="true"
-        onClick={() => setOpen(false)}
-      />
+      <div className={`nav-backdrop${open ? 'open' : ''}`} aria-hidden="true" onClick={() => setOpen(false)} />
     </header>
   );
 }

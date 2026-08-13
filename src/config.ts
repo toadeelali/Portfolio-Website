@@ -1,4 +1,4 @@
-export const domainName = "mobileslog.com";
+export const domainName = 'mobileslog.com';
 export const email = `hello@${domainName}`;
 
 export const currentYear = new Date().getFullYear();
